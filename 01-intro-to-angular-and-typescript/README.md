@@ -218,6 +218,10 @@ class Person implements Human {
 * `Hydration`: A process often used in server-side rendering (SSR) where HTML is initially rendered on the server, and Angular re-renders or "hydrates" the page on the client to make it interactive.
 * `Command`: `ng g c home --standalone` generates a new component named home in a standalone format, meaning it doesn’t rely on a module file for configuration. Standalone components simplify component organization and reduce dependencies.
 
+## Additional Insights, Gained While Working on the Lab Exercises
+* In TypeScript, an `abstract class` is a class that cannot be instantiated directly and serves as a blueprint for other classes. It is primarily used to define a common structure and behavior that other classes should inherit, while also allowing for certain methods to be left undefined, so that subclasses are required to implement them.
+* A `public member of a class` in TypeScript (and other object-oriented languages) is a property or method that is accessible from outside the class. This means you can access it freely from any instance of the class or even from other parts of your code. Public members are the default in TypeScript, so if you don’t specify an access modifier, a member is considered public.
+
 
 
 
