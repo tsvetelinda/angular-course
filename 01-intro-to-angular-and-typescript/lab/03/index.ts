@@ -1,4 +1,4 @@
-class Employee {
+abstract class Employee {
     name: string;
     age: number;
     salary: number;
