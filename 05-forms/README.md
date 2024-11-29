@@ -13,7 +13,7 @@ Feel free to explore the material, whether for learning or practicing!
 ```
 * Angular introduced the new control flows, which provide a clearer syntax, but work identically - `@if`, and `@for`:
 ```
-if (isVisible) {
+@if (isVisible) {
     <div>This element is conditionally rendered.</div>
 }
 ``` 
@@ -142,6 +142,7 @@ ngOnChanges(changes: SimpleChanges): void {
 ## Forms
 ### Template-Driven Forms
 * Template-Driven Forms rely heavily on Angular's directives like `ngModel`, `ngForm`, and validators defined in the template.
+
 **1. Key Components of Template-Driven Forms**
 * `ngForm`: Tracks the state and validity of the entire form.
 * `ngModel`: Two-way data binding for input fields, allowing Angular to track field values and apply validation.
@@ -151,7 +152,7 @@ ngOnChanges(changes: SimpleChanges): void {
 
     <form #loginForm="ngForm" (ngSubmit)="formSubmitHandler()">
         <div>
-            <label for="email"></label>
+            <label for="email">Email</label>
             <input type="text" id="email" name="email" ngModel #emailInput="ngModel">
         </div>
         @if (emailInput.touched) {
@@ -162,7 +163,7 @@ ngOnChanges(changes: SimpleChanges): void {
             </div>
         }
         <div>
-            <label for="password"></label>
+            <label for="password">Password</label>
             <input type="password" id="password" name="password" ngModel #passwordInput="ngModel">
         </div>
         <button>Login</button>
@@ -227,7 +228,7 @@ export class MaxCountDirective implements Validator {
 * The new directive then needs to be attached to an input file:
 ```
 <div class="form-group">
-    <label for="password"></label>
+    <label for="password">Password</label>
     <input type="password" id="password" name="password" ngModel #passwordInput="ngModel" [appMaxCount]="maxCountNumber">
 </div>
 
@@ -237,7 +238,7 @@ export class MaxCountDirective implements Validator {
 ```
 
 ### Reactive Forms
-* Reactive Forms focus on explicitly defining the form structure and validations programmatically in the component class. These are more suited for complex forms or dynamic validation scenarios.
+* `Reactive Forms` focus on explicitly defining the form structure and validations programmatically in the component class. These are more suited for complex forms or dynamic validation scenarios.
 
 **1. Key Components of Reactive Forms**
 * `FormGroup`: Represents the entire form or a group of controls.
@@ -246,7 +247,7 @@ export class MaxCountDirective implements Validator {
 export class RegisterComponent {
     registerForm = new FormGroup({
         email: new FormControl('', [Validators.required, Validators.email]),
-        password: new FormControl('', [Validators.maxLength(5), Validators.required]),
+        password: new FormControl('', [Validators.required, Validators.maxLength(5)]),
     });
 
     handleSubmit() { 
