@@ -1,5 +1,5 @@
 # DI, Intro to RxJS and Services
-In this folder, you'll find the notes I've taken while studying the topic (primarily based on SoftUni lectures). I've enriched the content and organized it in a simple yet clear manner for easy understanding. You'll also find a collection of exercises related to each lecture topic. The solutions are my own, while the exercise descriptions remain the property of SoftUni.
+In this folder, you'll find the notes I've taken while studying the topic (primarily based on SoftUni lectures). I've enriched the content and organized it in a simple yet clear manner for easy understanding.
 
 Feel free to explore the material, whether for learning or practicing!
 <hr>
@@ -166,6 +166,9 @@ export class UserListComponent implements OnInit {
 ## RxJS and Observables
 ### What is RxJS?
 * RxJS stands for `Reactive Extensions for JavaScript`. It’s a library that helps manage asynchronous data streams and events, commonly used in Angular to handle complex data flows.
+* **The Concept:** RxJS implements the idea of reactive programming, allowing you to handle asynchronous data as a stream.
+* **The Framework:** RxJS provides tools (observables, operators, and schedulers) for working with these streams.
+* You could still process asynchronous events in Angular without RxJS. However, you’d rely on lower-level APIs like Promises, async/await, or event listeners. These work fine but lack the composability and power of RxJS.
 
 ### Observables and Their Unique Qualities
 * Observables are a core feature of RxJS, enabling a powerful way to `work with asynchronous data` by handling streams of information over time.
