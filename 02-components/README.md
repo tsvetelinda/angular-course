@@ -1,5 +1,5 @@
 # Components
-In this folder, you'll find the notes I've taken while studying the topic (primarily based on SoftUni lectures). I've enriched the content and organized it in a simple yet clear manner for easy understanding. You'll also find a collection of exercises related to each lecture topic. The solutions are my own, while the exercise descriptions remain the property of SoftUni.
+In this folder, you'll find the notes I've taken while studying the topic (primarily based on SoftUni lectures). I've enriched the content and organized it in a simple yet clear manner for easy understanding.
 
 Feel free to explore the material, whether for learning or practicing!
 <hr>
@@ -30,9 +30,9 @@ export class UserItemComponent {}
 * standalone components are promoted by Angular 18 as the default approach, which simplifies architecture and enhances modularity. This means that components can now exist independently.
 
 ## How to add a new component?
-* `ng generate component user-list --standalone` - a command for generating the component `user-list`
-* `ng g c user-list --standalone` = shorthand for generating a component
-* Once the component is created, it has to be `imported` to the main AppComponent, if it needs to be used elsewhere and it is not standalone.
+* `ng generate component user-list` - a command for generating the component `user-list`
+* `ng g c user-list` = shorthand for generating a component
+* Once the component is created, it has to be `imported` to the main AppComponent, if it needs to be used elsewhere and it is standalone.
 * `@Component` = a decorator that tells Angular we are creating a component rather than a regular class. It allows us to add metadata to the component, such as `standalone`, `selector`, `template`, and `styles`.
 * Angular components can be self-closing, if they do not have any children: `<app-navigation-bar />`
 * To add dynamic content:
@@ -193,10 +193,10 @@ export class AppComponent {
 ```
 * `[message]="parentMessage"` binds the parent’s parentMessage property to the child’s message property using the `@Input` decorator.
 * `Explained`: 
-1. The parent component has a property parentMessage with the value "Hello from the Parent Component!".
-2. It uses [message]="parentMessage" to pass that value to the child component’s message property.
-3. In the child component (MessageComponent), @Input() message: string; means message can now hold whatever value the parent provides.
-4. Finally, <p>{{ message }}</p> displays "Hello from the Parent Component!" in the child component's template.
+1. The parent component has a property parentMessage with the value `"Hello from the Parent Component!"`.
+2. It uses `[message]="parentMessage"` to pass that value to the child component’s message property.
+3. In the child component (MessageComponent), `@Input() message: string;` means message can now hold the string value the parent provides.
+4. Finally, `<p>{{ message }}</p>` displays "Hello from the Parent Component!" in the child component's template.
 
 ### From Child to Parent
 * `@Output` is a decorator that lets the child component create an event that the parent component can listen to.
