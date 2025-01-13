@@ -1,5 +1,5 @@
 # Intro to Angular and TypeScript
-In this folder, you'll find the notes I've taken while studying the topic (primarily based on SoftUni lectures). I've enriched the content and organized it in a simple yet clear manner for easy understanding. You'll also find a collection of exercises related to each lecture topic. The solutions are my own, while the exercise descriptions remain the property of SoftUni.
+In this folder, you'll find the notes I've taken while studying the topic (primarily based on SoftUni lectures). I've enriched the content and organized it in a simple yet clear manner for easy understanding. You'll also find a collection of exercises related to this lecture topic. The solutions are my own, while the exercise descriptions remain the property of SoftUni.
 
 Feel free to explore the material, whether for learning or practicing!
 <hr>
@@ -8,16 +8,16 @@ Feel free to explore the material, whether for learning or practicing!
 * `HTTP (Hypertext Transfer Protocol)` is a foundational, text-based protocol for the web that enables communication between a client (like a browser) and a server.
     * **Client-Server Architecture**: HTTP is based on a request-response model, where the client sends a request, and the server provides a response.
     * **Stateless Protocol**: Each HTTP request is independent, meaning no information is retained between requests unless session management is implemented.
-    * **HTTPS (Hypertext Transfer Protocol Secure)**: The "S" stands for SSL/TLS encryption, which secures data transmission. By encrypting data, HTTPS prevents unauthorized access and ensures the privacy and integrity of information sent over the network. **HTTP** should ideally be used **only for local projects** or development environments, as it does not provide encryption.
+    * **HTTPS (Hypertext Transfer Protocol Secure)**: The "S" stands for SSL/TLS encryption, which secures data transmission. By encrypting data, HTTPS prevents unauthorized access and ensures the privacy and integrity of information sent over the network. **HTTP** should ideally be used **only for local projects** or **development environments**, as it does not provide encryption.
 
 ### HTTP Request Methods
 HTTP defines several methods that specify the action intended on a resource, commonly associated with CRUD operations:
 
 * `GET`: Retrieves or loads a resource. GET requests are typically safe, as they don't alter server data.
 * `POST`: Sends data to the server to create or store a resource. Often used for form submissions, **POST requests may change server state**.
-* `PUT`: Replaces a resource or creates it if it doesn't exist (insert).
+* `PUT`: Replaces a resource or creates it if it doesn't exist.
 * `DELETE`: Removes a resource.
-* `PATCH`: **Partially updates** a resource, only modifying specific fields rather than the entire resource (upsert functionality).
+* `PATCH`: **Partially updates** a resource, only modifying specific fields rather than the entire resource.
 * `HEAD`: Similar to GET, but only retrieves the resource's headers, often used to check metadata (like content type or last modification date) without downloading the content.
 * `OPTIONS`: Returns the HTTP methods that the server supports for the specified URL. This is often used in Cross-Origin Resource Sharing (CORS) to check if a client from a different origin has permission to access a resource. For example:
 ```
@@ -155,7 +155,7 @@ While the OSI model is a theoretical framework, the TCP/IP model is more practic
 
 ## Introduction to TypeScript
 * TypeScript is a tool that adds static typing to JavaScript, helping developers catch errors early and improve code quality.
-* ` A superset of JavaScript`: TypeScript is built on top of JavaScript. Any valid JavaScript code is also valid TypeScript, but TypeScript introduces additional features like type annotations and interfaces. This means you can write JavaScript code in a .ts file, and it will work just like in JavaScript.
+* `A superset of JavaScript`: TypeScript is built on top of JavaScript. Any valid JavaScript code is also valid TypeScript, but TypeScript introduces additional features like type annotations and interfaces. This means you can write JavaScript code in a .ts file, and it will work just like in JavaScript.
 * `Not directly supported by browsers or Node.js`: Browsers and Node.js do not natively understand TypeScript. Therefore, TypeScript code must be transpiled (not compiled) into JavaScript before it can be executed.
     * To compile/convert a TypeScript file, use the TypeScript compiler (tsc):
     ```
