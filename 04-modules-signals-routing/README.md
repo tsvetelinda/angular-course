@@ -1,11 +1,11 @@
 # Modules, Signals and Routing
-In this folder, you'll find the notes I've taken while studying the topic (primarily based on SoftUni lectures). I've enriched the content and organized it in a simple yet clear manner for easy understanding. You'll also find a collection of exercises related to each lecture topic. The solutions are my own, while the exercise descriptions remain the property of SoftUni.
+In this folder, you'll find the notes I've taken while studying the topic (primarily based on SoftUni lectures). I've enriched the content and organized it in a simple yet clear manner for easy understanding.
 
 Feel free to explore the material, whether for learning or practicing!
 <hr>
 
 ## Standalone Components
-Standalone components are a feature introduced in Angular to simplify application structure and enhance flexibility in managing dependencies. They allow developers to build components, directives, and pipes without requiring a parent or shared module.
+Standalone components are a feature introduced in Angular to simplify application structure and enhance flexibility in managing dependencies. They allow developers to build components, directives, and pipes without requiring a parent or shared module. (They were introduced in 2023 - Angular 17).
 ### Key Features
 #### 1. Direct Import Mechanism
 Standalone components, directives, and pipes can import one another directly within their metadata using the `imports` array. This eliminates the need for shared or parent modules to connect them.
@@ -31,8 +31,8 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-greeting',
-  standalone: true, // Declares the component as standalone
-  imports: [CommonModule], // Import necessary Angular modules
+  standalone: true,             // Declares the component as standalone
+  imports: [CommonModule],      // Import necessary Angular modules
   template: `
     <div class="greeting">
       <h2>{{ message }}</h2>
@@ -71,9 +71,9 @@ import { CommonModule } from '@angular/common';
 import { GreetingComponent } from './greeting.component';
 
 @NgModule({
-  declarations: [GreetingComponent], // Declare the component in the module
-  imports: [CommonModule], // Import CommonModule to use common Angular directives
-  exports: [GreetingComponent], // Export the component to make it reusable
+  declarations: [GreetingComponent],          // Declare the component in the module
+  imports: [CommonModule],                    // Import CommonModule to use common Angular directives
+  exports: [GreetingComponent],               // Export the component to make it reusable
 })
 export class GreetingModule {}
 ```
@@ -81,19 +81,19 @@ export class GreetingModule {}
 ```
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { GreetingModule } from './greeting/greeting.module'; // Import the module
+import { GreetingModule } from './greeting/greeting.module';        // Import the module
 
 @NgModule({
   declarations: [],
-  imports: [BrowserModule, GreetingModule], // Import the GreetingModule
-  bootstrap: [GreetingComponent], // Bootstrap the GreetingComponent directly
+  imports: [BrowserModule, GreetingModule],        // Import the GreetingModule
+  bootstrap: [GreetingComponent],                 // Bootstrap the GreetingComponent directly
 })
 export class AppModule {}
 ```
 
 ## Signals
 * Signals introduce a new reactivity model in Angular, aimed at managing state efficiently.
-* They are an alternative to observables for local state management in components.
+* They are `an alternative to observables for local state management` in components.
 * Signals reactively update views where needed, reducing unnecessary re-renders and improving performance.
 * `Value Wrapper` - A signal wraps around a value and notifies any dependent parts of the application when this value changes.
 * `Data Types` - Signals can hold any value—primitives (e.g., numbers, strings) or complex objects (e.g., arrays, objects).
@@ -146,7 +146,7 @@ const count: WritableSignal<number> = signal(0);
 const doubleCount: Signal<number> = computed(() => count() * 2);
 ```
 * `WritableSignal` is a type of signal that can both hold a value and allow updates to it, typical for the `signal()`.
-* `Signal` is a type of singal, which is read-only. This means you cannot modify the value directly, and it depends on other signals for its value, automatically updating when those dependent signals change.
+* `Signal` is a type of signal, which is read-only. This means you cannot modify the value directly, and it depends on other signals for its value, automatically updating when those dependent signals change.
 
 ## Router Module
 * The Router Module in Angular allows for client-side navigation without page reloads, enabling Single Page Applications (SPA).
