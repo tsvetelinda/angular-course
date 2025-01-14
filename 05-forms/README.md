@@ -1,5 +1,5 @@
 # Directives and Forms
-In this folder, you'll find the notes I've taken while studying the topic (primarily based on SoftUni lectures). I've enriched the content and organized it in a simple yet clear manner for easy understanding. You'll also find a collection of exercises related to each lecture topic. The solutions are my own, while the exercise descriptions remain the property of SoftUni.
+In this folder, you'll find the notes I've taken while studying the topic (primarily based on SoftUni lectures). I've enriched the content and organized it in a simple yet clear manner for easy understanding. 
 
 Feel free to explore the material, whether for learning or practicing!
 <hr>
@@ -11,7 +11,7 @@ Feel free to explore the material, whether for learning or practicing!
 ```
 <div *ngIf="isVisible">This element is conditionally rendered.</div>
 ```
-* Angular introduced the new control flows, which provide a clearer syntax, but work identically - `@if`, and `@for`:
+* Angular introduced the new `control flows`, which provide a clearer syntax, but work identically - `@if`, and `@for`:
 ```
 @if (isVisible) {
     <div>This element is conditionally rendered.</div>
